@@ -6,7 +6,8 @@ import swAlert from '@sweetalert/with-react';
 
 export const Login = () => {
 
-  let token = localStorage.getItem('token');
+  // let token = localStorage.getItem('token');
+  let token = sessionStorage.getItem('token');
   
   const navigate = useNavigate();
 
@@ -46,7 +47,8 @@ export const Login = () => {
         const token = res.data.token;
 
         //Save in localstorage
-        localStorage.setItem('token', token);
+        // localStorage.setItem('token', token);
+        sessionStorage.setItem('token', token);
         navigate('/list');
 
       })

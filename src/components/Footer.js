@@ -3,8 +3,8 @@ import '../css/Footer.css';
 
 export const Footer = () => {
   return (
-    <div className="footer-copyright text-center py-2">
-      <footer>
+    <footer>
+      <div className="footer-copyright text-center py-2">
         <nav>
           {/* <ul>
             <li>
@@ -13,7 +13,7 @@ export const Footer = () => {
           </ul> */}
         </nav>
         <p>© Copyright Alkemy Challenge</p>
-      </footer>
-    </div>
+      </div>
+    </footer>
   )
 }

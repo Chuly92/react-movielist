@@ -5,7 +5,8 @@ import swAlert from '@sweetalert/with-react';
 
 export const List = () => {
 
-  let token = localStorage.getItem('token');
+  // let token = localStorage.getItem('token');
+  let token = sessionStorage.getItem('token');
   let urlImage = 'https://image.tmdb.org/t/p/w500/';
 
   const [moviesList, setMoviesList] = useState([]);
