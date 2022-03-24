@@ -3,7 +3,7 @@ import {Link, Navigate} from 'react-router-dom';
 import axios from 'axios';
 import swAlert from '@sweetalert/with-react';
 
-export const List = () => {
+export const List = ({addOrRemoveFromFavs}) => {
 
   // let token = localStorage.getItem('token');
   let token = sessionStorage.getItem('token');
@@ -28,7 +28,6 @@ export const List = () => {
 
   }, [setMoviesList]);
 
-  console.log(moviesList);
 
   // const navigate = useNavigate();
   // useEffect(() => {
@@ -52,6 +51,11 @@ export const List = () => {
               <div className="col-3" key={index}>
                 <div className="card my-4">
                   <img src={`${urlImage}${e.poster_path}`} className="card-img-top" alt="..." />
+                  <button 
+                    className="favourite-btn"
+                    onClick={addOrRemoveFromFavs}
+                    data-movie-id={e.id}
+                  >🖤</button>
                   <div className="card-body">
                     <h5 className="card-title">{e.title.substring(0, 30)}</h5>
                     <p className="card-text">{e.overview.substring(0, 100)}...</p>

@@ -1,5 +1,29 @@
-body {
-  background-color: salmon;
-  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+.favourite-btn {
+  width: 30px;
+  height: 30px;
+  background-color: aliceblue;
+  border-radius: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: 10px;
+  top: 10;
+  border: none;
+  font-size: 15px;
 }
 
+.header-nav{
+  margin-top: 0.5rem;
+  text-align: center;
+}
+
+.d-flex{
+  margin-left: auto;
+  margin-right: 1rem;
+  align-items: center;
+  text-align: right;
+  float: right;
+}
+
+body { padding-bottom: 70px; }
