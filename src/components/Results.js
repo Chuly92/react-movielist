@@ -16,9 +16,11 @@ export const Results = () => {
   
   useEffect(() => {
     const endPoint = `https://api.themoviedb.org/3/search/movie?api_key=${apiKey}&language=en-US&page=1&include_adult=false&query=${keyword}`;
-    
+    let isMounted = true;
+
     axios.get(endPoint)
       .then(res => {
+        if(isMounted){
         const moviesArray = res.data.results;
         if(moviesArray.length === 0){
           swAlert(
@@ -27,6 +29,7 @@ export const Results = () => {
         }else{
           setMoviesResults(moviesArray);
         }
+      }
       })
       .catch(err => {
         swAlert(
