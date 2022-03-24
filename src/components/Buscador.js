@@ -5,7 +5,8 @@ import { useNavigate } from 'react-router-dom';
 export const Buscador = () => {
 
   const navigate = useNavigate();
-  
+  let token = sessionStorage.getItem('token');
+
   const handleSubmit = e => {
     e.preventDefault();
     const keyword = e.currentTarget.keyword.value.trim();
@@ -21,11 +22,15 @@ export const Buscador = () => {
   }
 
   return (
-    <form className="d-flex" onSubmit={handleSubmit}>
+    <>
+    { token && 
+    <form className="form-search" onSubmit={handleSubmit}>
       <label className="form-label mb-0 input-group-sm">
         <input className="form-control" type="text" name="keyword" placeholder="Search a movie here"/>
       </label>
       <button type="submit" className="btn btn btn-outline-light btn-sm">Search</button>
     </form>
+    }
+    </>
   )
 }

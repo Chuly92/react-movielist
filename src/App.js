@@ -77,7 +77,7 @@ function App() {
 
   return (
     <>
-      <Header />
+      <Header favourites={favourites}/>
 
       <div className="container mt-3">
         <Routes>

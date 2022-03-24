@@ -2,17 +2,17 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Buscador } from './Buscador';
 
-export const Header = () => {
+export const Header = ({favourites}) => {
   return (
       <header>
         <nav className="nav navbar-expand-sm navbar-dark bg-dark">
-          <ul>
+          <ul> 
             <li className="header-nav">
-              <span className="navbar-brand h1 text-info">Alkemy Challenge</span>
-              <Link className="navbar-brand mx-2" to="/">Home</Link>
-              <Link className="navbar-brand mx-2" to="/list">List</Link>
-              <Link className="navbar-brand mx-2" to="/favourites">Favourites</Link>
-              <Link className="navbar-brand mx-2" to="/contact">Contact</Link>
+              <span className="navbar-brand fs-5 text-info">Alkemy Challenge</span>
+              <Link className="navbar-brand fs-6 mx-2" to="/">Home</Link>
+              <Link className="navbar-brand fs-6 mx-2" to="/list">List</Link>
+              <Link className="navbar-brand fs-6 mx-2" to="/favourites">Favourites</Link>
+              <span className="nav mx-1 badge bg-primary">Movies in Fav: {favourites.length}</span>
             </li>
           </ul>
           <Buscador />

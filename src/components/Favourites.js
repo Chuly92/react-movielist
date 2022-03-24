@@ -24,6 +24,7 @@ export const Favourites = ({favourites, addOrRemoveFromFavs}) => {
 
       <h2>Favourites Section</h2>
       <div className="row">
+        { !favourites.length && <div className="col-12 text-danger">You don't have any favourites movies yet.</div>}
 
         {
           favourites.map((e, index) =>{
