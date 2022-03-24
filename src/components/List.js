@@ -59,7 +59,7 @@ export const List = ({addOrRemoveFromFavs}) => {
                   <div className="card-body">
                     <h5 className="card-title">{e.title.substring(0, 30)}</h5>
                     <p className="card-text">{e.overview.substring(0, 100)}...</p>
-                    <Link to={`/detail?movieID=${e.id}`} className="btn btn-primary">View Detail</Link>
+                    <Link to={`/react-movielist/detail?movieID=${e.id}`} className="btn btn-primary">View Detail</Link>
                   </div>
                 </div>
               </div>

@@ -82,13 +82,14 @@ function App() {
       <div className="container mt-3">
         <Routes>
           <Route exact path="/" element={<Login />} />
+          <Route exact path="/react-movielist" element={<Login />} />
           {/* <Route path="/list" element={<List />} /> */}
           
           {/* In V6 router doesn't exist router anymore */}
-          <Route path="/list" element={ <List addOrRemoveFromFavs={addOrRemoveFromFavs} /> } />
-          <Route path="/detail" element={<Detail />} />
-          <Route path="/results" element={ <Results addOrRemoveFromFavs={addOrRemoveFromFavs} />} />
-          <Route path="/favourites" element={<Favourites favourites={favourites} addOrRemoveFromFavs={addOrRemoveFromFavs}/>} />
+          <Route path="/react-movielist/list" element={ <List addOrRemoveFromFavs={addOrRemoveFromFavs} /> } />
+          <Route path="/react-movielist/detail" element={<Detail />} />
+          <Route path="/react-movielist/results" element={ <Results addOrRemoveFromFavs={addOrRemoveFromFavs} />} />
+          <Route path="/react-movielist/favourites" element={<Favourites favourites={favourites} addOrRemoveFromFavs={addOrRemoveFromFavs}/>} />
         </Routes>
 
         <Footer />

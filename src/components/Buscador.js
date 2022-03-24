@@ -15,7 +15,7 @@ export const Buscador = () => {
       swAlert(<h4>Please write a movie to find</h4>)
     }else {
       e.currentTarget.keyword.value = '';
-      navigate(`/results?keyword=${keyword}`);
+      navigate(`/react-movielist/results?keyword=${keyword}`);
     }
 
     console.log(keyword);

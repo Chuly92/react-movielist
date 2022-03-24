@@ -49,14 +49,14 @@ export const Login = () => {
         //Save in localstorage
         // localStorage.setItem('token', token);
         sessionStorage.setItem('token', token);
-        navigate('/list');
+        navigate('/react-movielist/list');
 
       })
   }
 
   return (
     <>
-      {token && <Navigate to="/list" />}
+      {token && <Navigate to="/react-movielist/list" />}
 
       <h2>Login Form</h2>
       <form onSubmit={handleSubmit}>
